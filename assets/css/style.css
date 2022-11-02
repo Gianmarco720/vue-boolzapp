@@ -45,6 +45,15 @@ img {
     font-size: 12px;
 }
 
-.user_chat_info img {
+.user_image {
     width: 15%;
+}
+
+.user_chat_info p {
+    font-size: 12px;
+}
+
+.contacts:hover {
+    cursor: pointer;
+    background-color: lightgrey;
 }
