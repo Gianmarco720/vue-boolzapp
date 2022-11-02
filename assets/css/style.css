@@ -49,11 +49,21 @@ img {
     width: 15%;
 }
 
-.user_chat_info p {
+.contacts p,
+.contacts span {
     font-size: 12px;
 }
 
 .contacts:hover {
     cursor: pointer;
     background-color: lightgrey;
+}
+
+.sent_time {
+    margin-left: auto;
+}
+
+.dynamic_contact {
+    height: 100vh;
+    overflow-y: scroll;
 }
