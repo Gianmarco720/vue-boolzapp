@@ -1,8 +1,50 @@
 body {
     background-color: #d6dbd8;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
     height: 100px;
     background-color: #009688;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.container {
+    bottom: 80px;
+}
+
+.row {
+    background-color: #eaeaea;
+}
+
+.user_info_left img {
+    width: 50px;
+}
+
+.user_options_left a {
+    color: #b1b1b1;
+}
+
+.notifications {
+    background-color: #8edafc;
+    width: 100%;
+}
+
+.notifications i {
+    padding: 1rem;
+    background-color: white;
+    border-radius: 50%;
+    color: #8edafc;
+}
+
+.notifications_options a {
+    font-size: 12px;
+}
+
+.user_photo {
+    width: 15%;
 }

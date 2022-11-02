@@ -128,7 +128,7 @@ createApp({
                 },
                 {
                     name: 'Federico',
-                    avatar: './assets/img/avatar_8.jpg',
+                    avatar: './assets/img/avatar_7.jpg',
                     visible: true,
                     messages: [
                         {
@@ -145,7 +145,7 @@ createApp({
                 },
                 {
                     name: 'Davide',
-                    avatar: './assets/img/avatar_io.jpg',
+                    avatar: './assets/img/avatar_8.jpg',
                     visible: true,
                     messages: [
                         {
