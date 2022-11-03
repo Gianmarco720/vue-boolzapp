@@ -170,7 +170,8 @@ createApp({
         }
     },
     methods: {
-        selectContact: function(index) {
+        // Cambio i messaggi al click di un'altra chat
+        selectContact: function(index) {               
             this.activeContact = index;
         }
     }
