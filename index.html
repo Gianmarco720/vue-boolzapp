@@ -29,18 +29,22 @@
         <!-- Sezione menu chat -->
         <div class="col-4 border-end border-2 p-0">
           <!-- Profilo utente -->
-          <div class="user_menu_left d-flex align-items-center justify-content-between mx-3">
-            <div class="user_info_left">
-              <img class="p-1" src="./assets/img/avatar_io.jpg" alt="">
-              <span>Sofia</span>
+          <header class="border-bottom">
+            <div class="user_menu_left d-flex align-items-center justify-content-between">
+              <div class="user_info_left">
+                <img class="p-1 ms-3" src="./assets/img/avatar_io.jpg" alt="">
+                <span>Sofia</span>
+              </div>
+  
+              <!-- Menu opzioni utente -->
+              <div class="user_options_left d-flex align-items-center justify-content-between w-25 me-3">
+                <a href="#"><i class="fa-solid fa-circle-notch"></i></a>
+                <a href="#"><i class="fa-solid fa-message"></i></a>
+                <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+              </div>
             </div>
-            <!-- Menu opzioni utente -->
-            <div class="user_options_left d-flex align-items-center justify-content-between w-25">
-              <a href="#"><i class="fa-solid fa-circle-notch"></i></a>
-              <a href="#"><i class="fa-solid fa-message"></i></a>
-              <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
-            </div>
-          </div>
+          </header>
+
           <!-- Sezioni notifiche -->
           <div class="notifications d-flex align-items-center">
             <div class="notifications_icon">
@@ -51,34 +55,57 @@
               <a class="text-muted" href="#">Attiva notifiche desktop</a>
             </div>
           </div>
+
           <!-- Sezione cerca o inizia chat -->
           <div class="input-group input-group-sm p-2">
-            <span class="input-group-text bg-white rounded-0" id="inputGroup-sizing-sm"><i
-                class="fa-solid fa-magnifying-glass text-muted"></i></span>
+            <span class="input-group-text bg-white rounded-0" id="inputGroup-sizing-sm"><i class="fa-solid fa-magnifying-glass text-muted"></i></span>
             <input type="text" class="form-control border-start-0 rounded-0" aria-label="Sizing example input"
               aria-describedby="inputGroup-sizing-sm" placeholder="Cerca o inizia una nuova chat">
           </div>
+
           <!-- Sezione contatti generati dinamicamente -->
           <section class="dynamic_contact">
-            <div class="contacts border-bottom border-1" v-for="(contact, index) in contacts">
+            <div class="contacts border-bottom border-1" :class="index === activeContact ? 'active' : ''" v-for="(contact, index) in contacts">
               <div class="contact d-flex align-items-center ps-3">
                 <div class="user_image py-2">
                   <img :src="contact.avatar" :alt="contact.name">
                 </div>
                 <div class="user_chat_info">
                   <h6 class="ms-2 mb-0">{{contacts[index].name}}</h6>
-                  <p class="pt-1 ms-2 text-muted">Ultimo messaggio inviato</p>
+                  <p class="pt-1 ms-2">Ultimo messaggio inviato</p>
                 </div>
                 <div class="sent_time align-self-start me-2">
-                  <span class="text-muted">12:00</span>
+                  <span>12:00</span>
                 </div>
               </div>
             </div>
           </section>
         </div>
-        <div class="col-8"></div>
+
+        <!-- Sezione chat principale -->
+        <div class="col-8 p-0">
+          <header class="d-flex justify-content-between align-items-center border-bottom">
+            <div class="top_left_chat d-flex">
+              <div class="current_user_avatar">
+                <img class="p-1" src="./assets/img/avatar_1.jpg" alt="">
+              </div>
+              <div class="current_user_info">
+                <span>Michele</span>
+                <p class="mb-0">Ultimo accesso oggi alle 12:00</p>
+              </div>
+            </div>
+            <div class="top_right_chat d-flex justify-content-between me-3">
+              <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+              <a href="#"><i class="fa-solid fa-paperclip"></i></a>
+              <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+            </div>
+          </header>
+          <div class="messages d-flex flex-column p-5">
+            <div class="sent align-self-end p-1 rounded w-25">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, amet!</div>
+            <div class="received align-self-start p-1 rounded w-25">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, amet!</div>
+          </div>
+        </div>
       </div>
-    </div>
   </main>
 
   <footer>
