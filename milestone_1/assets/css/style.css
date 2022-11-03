@@ -83,8 +83,9 @@ img {
 
 .messages {
     background-image: url(../img/mine.jpg);
-    width: 100%;
-    flex-grow: 1;
+    overflow-y: scroll;
+    height: calc(100% - 110px);
+    font-size: 13px;
 }
 
 .sent {
@@ -93,4 +94,13 @@ img {
 
 .received {
     background-color: #FFFFFF;
+}
+
+.text_area {
+    background-color: #f3eeea;
+    height: 59px;
+}
+
+.message_input {
+    width: 80%;
 }
