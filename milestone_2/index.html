@@ -67,7 +67,7 @@
           <!-- Sezione contatti generati dinamicamente -->
           <section class="dynamic_contact">
             <div class="contacts border-bottom border-1" :class="index === activeContact ? 'active' : ''"
-              v-for="(contact, index) in contacts" @click="selectContact">
+              v-for="(contact, index) in contacts" @click="selectContact(index)">
               <div class="contact d-flex align-items-center ps-3">
                 <div class="user_image py-2">
                   <img :src="contact.avatar" :alt="contact.name">
