@@ -198,7 +198,7 @@ createApp({
             this.contacts.forEach(contact => {
                 console.log('Ho cliccato enter sulla search bar');
                 // filtro tutti i contatti cambiando il dato da true a false
-                if(contact.name.toLowerCase().includes(this.searchChat.toLowerCase())) {
+                if(!(contact.name.toLowerCase().includes(this.searchChat.toLowerCase()))) {
                     contact.visible = false;
                 } else {
                     // Rendo di nuovo i contatti visibili
